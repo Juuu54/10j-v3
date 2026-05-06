@@ -1,0 +1,1177 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ============================================
+ RESET & BASE
+============================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ background: #F4EAD5;
+ color: #121010;
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+}
+
+/* Évite les mots orphelins en fin de ligne (CSS moderne) */
+h1, h2, h3, .punchline, .titre-jour, .bonus-content h3, blockquote {
+ text-wrap: balance;
+}
+p {
+ text-wrap: pretty;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ============================================
+ PALETTE — Le Carnet du Chef
+ Noir : #121010
+ Crème : #F4EAD5
+ Doré clair : #C9A961
+ Doré foncé : #8A7548
+ Rouge : #A83232
+ Vert : #2E7D32
+============================================ */
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+/* ============================================
+ SECTION 1 — BANDEAU URGENCE
+============================================ */
+.bandeau-urgence {
+ background: #A83232;
+ color: #FFFFFF;
+ padding: 12px 20px;
+ text-align: center;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 14px;
+ font-weight: 600;
+ letter-spacing: 0.2px;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+}
+
+/* ============================================
+ SECTION 2 — HERO
+============================================ */
+.hero {
+ background: #121010;
+ padding: 80px 24px;
+ background-image: 
+ linear-gradient(135deg, transparent 49%, rgba(201,169,97,0.04) 49%, rgba(201,169,97,0.04) 51%, transparent 51%);
+ background-size: 28px 28px;
+}
+
+.hero-grid {
+ max-width: 1100px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1.2fr;
+ gap: 60px;
+ align-items: center;
+}
+
+.hero-image img {
+ max-width: 360px;
+ margin: 0 auto;
+ box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+ border-radius: 16px;
+}
+
+.hero-content h1 {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ color: #F4EAD5;
+ font-size: 36px;
+ line-height: 1.15;
+ font-weight: 800;
+ margin-bottom: 18px;
+ letter-spacing: -0.5px;
+}
+
+.hero-content h1 .accent {
+ color: #A83232;
+ display: block;
+}
+
+.hero-subtitle {
+ color: #C9A961;
+ font-size: 19px;
+ font-style: italic;
+ margin-bottom: 24px;
+ line-height: 1.4;
+}
+
+.hero-pitch {
+ color: #F4EAD5;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 16px;
+ line-height: 1.6;
+ margin-bottom: 32px;
+ opacity: 0.95;
+}
+
+.hero-bullets {
+ list-style: none;
+ margin-bottom: 36px;
+}
+
+.hero-bullets li {
+ color: #F4EAD5;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 15px;
+ padding: 10px 0;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+}
+
+.hero-bullets li::before {
+ content: "✓";
+ color: #C9A961;
+ font-size: 22px;
+ font-weight: bold;
+ flex-shrink: 0;
+}
+
+/* ============================================
+ BOUTONS CTA — utilisés partout
+============================================ */
+.cta-button {
+ display: inline-block;
+ background: #A83232;
+ color: #FFFFFF;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 17px;
+ font-weight: 700;
+ padding: 18px 36px;
+ border: none;
+ border-radius: 50px;
+ text-decoration: none;
+ letter-spacing: 0;
+ cursor: pointer;
+ transition: all 0.2s ease;
+ box-shadow: 0 6px 20px rgba(168,50,50,0.4);
+ text-align: center;
+ width: 100%;
+ max-width: 480px;
+}
+
+.cta-button:hover {
+ background: #921F1F;
+ transform: translateY(-2px);
+ box-shadow: 0 10px 30px rgba(168,50,50,0.5);
+}
+
+.cta-microline {
+ display: block;
+ margin-top: 14px;
+ color: #8A7548;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 13px;
+ letter-spacing: 0.3px;
+}
+
+/* ============================================
+ SECTION 3 — RECONNAISSEZ-VOUS
+============================================ */
+.section-reconnaissez {
+ background: #F4EAD5;
+ padding: 80px 24px;
+}
+
+.section-title {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 30px;
+ font-weight: 800;
+ color: #121010;
+ text-align: center;
+ margin-bottom: 50px;
+ letter-spacing: -0.3px;
+}
+
+.section-title.alt-color {
+ color: #F4EAD5;
+}
+
+.section-reconnaissez p {
+ font-size: 16px;
+ line-height: 1.75;
+ color: #121010;
+ margin-bottom: 22px;
+ max-width: 720px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.section-reconnaissez p strong {
+ font-weight: 700;
+ color: #A83232;
+}
+
+/* ============================================
+ SECTION 4 — IMAGINEZ DANS 14 JOURS
+============================================ */
+.section-imaginez {
+ background: #121010;
+ padding: 80px 24px;
+ background-image: 
+ linear-gradient(135deg, transparent 49%, rgba(201,169,97,0.04) 49%, rgba(201,169,97,0.04) 51%, transparent 51%);
+ background-size: 28px 28px;
+}
+
+.section-imaginez p {
+ font-size: 17px;
+ line-height: 1.75;
+ color: #F4EAD5;
+ margin-bottom: 22px;
+ max-width: 720px;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+}
+
+.punchline {
+ color: #C9A961 !important;
+ font-style: italic;
+ font-size: 22px !important;
+ margin-top: 32px !important;
+ line-height: 1.5 !important;
+}
+
+/* ============================================
+ SECTION 5 — VOICI LE PRODUIT
+============================================ */
+.section-voici {
+ background: #F4EAD5;
+ padding: 80px 24px;
+}
+
+.section-voici .pack-image {
+ max-width: 850px;
+ margin: 0 auto 50px;
+}
+
+.section-voici h2 {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 26px;
+ color: #121010;
+ text-align: center;
+ margin-bottom: 30px;
+ font-weight: 800;
+ letter-spacing: -0.3px;
+}
+
+.section-voici p {
+ font-size: 15px;
+ line-height: 1.75;
+ color: #121010;
+ max-width: 720px;
+ margin: 0 auto 18px;
+ text-align: center;
+}
+
+.steps-list {
+ max-width: 720px;
+ margin: 30px auto;
+ list-style: none;
+ padding: 0;
+}
+
+.steps-list li {
+ font-size: 15px;
+ line-height: 1.75;
+ color: #121010;
+ padding: 8px 0;
+ padding-left: 40px;
+ position: relative;
+ text-align: left;
+}
+
+.steps-list li::before {
+ content: counter(step-counter);
+ counter-increment: step-counter;
+ position: absolute;
+ left: 0;
+ top: 8px;
+ background: #A83232;
+ color: #FFFFFF;
+ width: 28px;
+ height: 28px;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 700;
+ font-size: 14px;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.steps-list { counter-reset: step-counter; }
+
+/* ============================================
+ SECTION 6 — LES 10 JOURS (GRILLE)
+============================================ */
+.section-jours {
+ background: #F4EAD5;
+ padding: 60px 24px 80px;
+ border-top: 1px solid rgba(138,117,72,0.2);
+}
+
+.jours-grid {
+ max-width: 1000px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 16px;
+}
+
+.jour-card {
+ background: #FFFFFF;
+ padding: 22px 24px;
+ border-radius: 18px;
+ border-left: 4px solid #A83232;
+ box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+ transition: transform 0.2s ease;
+}
+
+.jour-card:hover { transform: translateY(-2px); }
+
+.jour-card .titre-jour {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ color: #A83232;
+ font-size: 15px;
+ font-weight: 700;
+ margin-bottom: 8px;
+ letter-spacing: 0.3px;
+}
+
+.jour-card .desc-jour {
+ color: #121010;
+ font-size: 14px;
+ line-height: 1.5;
+}
+
+/* ============================================
+ SECTION 7 — BONUS WORKBOOK
+============================================ */
+.section-bonus {
+ background: #8A7548;
+ padding: 80px 24px;
+ background-image: 
+ linear-gradient(135deg, transparent 49%, rgba(255,255,255,0.03) 49%, rgba(255,255,255,0.03) 51%, transparent 51%);
+ background-size: 28px 28px;
+}
+
+.section-bonus h2 {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ color: #F4EAD5;
+ text-align: center;
+ font-size: 26px;
+ margin-bottom: 50px;
+ font-weight: 800;
+ letter-spacing: -0.3px;
+}
+
+.bonus-grid {
+ max-width: 1000px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1.2fr;
+ gap: 50px;
+ align-items: center;
+}
+
+.bonus-image img {
+ max-width: 320px;
+ margin: 0 auto;
+ box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+ border-radius: 16px;
+}
+
+.bonus-content h3 {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ color: #FFFFFF;
+ font-size: 22px;
+ font-weight: 800;
+ margin-bottom: 12px;
+ letter-spacing: -0.3px;
+}
+
+.bonus-content .sub {
+ color: #F4EAD5;
+ font-style: italic;
+ font-size: 18px;
+ margin-bottom: 20px;
+ opacity: 0.9;
+}
+
+.bonus-content p {
+ color: #F4EAD5;
+ font-size: 16px;
+ line-height: 1.7;
+ margin-bottom: 18px;
+ opacity: 0.95;
+}
+
+.bonus-bullets {
+ list-style: none;
+ margin: 20px 0;
+}
+
+.bonus-bullets li {
+ color: #F4EAD5;
+ font-size: 16px;
+ padding: 8px 0;
+ padding-left: 28px;
+ position: relative;
+ line-height: 1.5;
+}
+
+.bonus-bullets li::before {
+ content: "✓";
+ position: absolute;
+ left: 0;
+ top: 8px;
+ color: #FFFFFF;
+ font-weight: bold;
+ font-size: 18px;
+}
+
+.bonus-content .closing {
+ color: #FFFFFF;
+ font-style: italic;
+ font-size: 16px;
+ margin-top: 24px;
+ padding-top: 20px;
+ border-top: 1px solid rgba(244,234,213,0.3);
+}
+
+/* ============================================
+ SECTION 8 — POUR QUI C'EST FAIT
+============================================ */
+.section-pourqui {
+ background: #F4EAD5;
+ padding: 80px 24px;
+}
+
+.pourqui-grid {
+ max-width: 1000px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 30px;
+}
+
+.pourqui-card {
+ background: #FFFFFF;
+ padding: 32px 28px;
+ border-radius: 22px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.pourqui-card.positive {
+ border-left: 5px solid #2E7D32;
+}
+
+.pourqui-card.negative {
+ border-left: 5px solid #A83232;
+}
+
+.pourqui-card h3 {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 18px;
+ font-weight: 800;
+ margin-bottom: 24px;
+ letter-spacing: 0.3px;
+}
+
+.pourqui-card.positive h3 { color: #2E7D32; }
+.pourqui-card.negative h3 { color: #A83232; }
+
+.pourqui-card ul {
+ list-style: none;
+}
+
+.pourqui-card ul li {
+ padding: 10px 0;
+ color: #121010;
+ font-size: 15px;
+ line-height: 1.6;
+ padding-left: 28px;
+ position: relative;
+}
+
+.pourqui-card.positive ul li::before {
+ content: "✓";
+ position: absolute;
+ left: 0;
+ top: 10px;
+ color: #2E7D32;
+ font-weight: bold;
+ font-size: 18px;
+}
+
+.pourqui-card.negative ul li::before {
+ content: "✗";
+ position: absolute;
+ left: 0;
+ top: 10px;
+ color: #A83232;
+ font-weight: bold;
+ font-size: 18px;
+}
+
+/* ============================================
+ SECTION 9 — POURQUOI CE MANUEL (auteur)
+============================================ */
+.section-auteur {
+ background: #121010;
+ padding: 80px 24px;
+ background-image: 
+ linear-gradient(135deg, transparent 49%, rgba(201,169,97,0.04) 49%, rgba(201,169,97,0.04) 51%, transparent 51%);
+ background-size: 28px 28px;
+}
+
+.section-auteur .container-narrow {
+ max-width: 760px;
+}
+
+.section-auteur blockquote {
+ color: #C9A961;
+ font-size: 18px;
+ font-style: italic;
+ line-height: 1.6;
+ margin-bottom: 28px;
+ padding-left: 28px;
+ border-left: 3px solid #C9A961;
+}
+
+.section-auteur .signature {
+ color: #F4EAD5;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 16px;
+ letter-spacing: 0.5px;
+ margin-top: 32px;
+ text-align: right;
+ opacity: 0.8;
+}
+
+/* ============================================
+ SECTION 10 — GARANTIE
+============================================ */
+.section-garantie {
+ background: #F4EAD5;
+ padding: 80px 24px;
+}
+
+.garantie-card {
+ max-width: 750px;
+ margin: 0 auto;
+ background: #FFFFFF;
+ padding: 50px 40px;
+ border-radius: 22px;
+ border: 3px solid #C9A961;
+ text-align: center;
+ box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.garantie-icon {
+ font-size: 60px;
+ margin-bottom: 18px;
+}
+
+.garantie-card h2 {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 24px;
+ color: #121010;
+ margin-bottom: 24px;
+ font-weight: 800;
+}
+
+.garantie-card p {
+ color: #121010;
+ font-size: 15px;
+ line-height: 1.7;
+ margin-bottom: 16px;
+}
+
+.garantie-card .closing {
+ color: #8A7548;
+ font-style: italic;
+ font-size: 15px;
+ margin-top: 24px;
+ padding-top: 24px;
+ border-top: 1px solid rgba(138,117,72,0.3);
+}
+
+/* ============================================
+ SECTION 11 — PRIX FINAL + ACHAT
+============================================ */
+.section-prix {
+ background: #121010;
+ padding: 80px 24px;
+ background-image: 
+ linear-gradient(135deg, transparent 49%, rgba(201,169,97,0.04) 49%, rgba(201,169,97,0.04) 51%, transparent 51%);
+ background-size: 28px 28px;
+}
+
+.prix-card {
+ max-width: 700px;
+ margin: 0 auto;
+ background: #FFFFFF;
+ padding: 50px 40px;
+ border-radius: 22px;
+ border: 3px solid #C9A961;
+ text-align: center;
+ box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.prix-card h2 {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 24px;
+ color: #121010;
+ margin-bottom: 30px;
+ font-weight: 800;
+}
+
+.prix-card .offer-list {
+ list-style: none;
+ margin-bottom: 30px;
+ text-align: left;
+ max-width: 480px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.prix-card .offer-list li {
+ padding: 10px 0;
+ padding-left: 32px;
+ position: relative;
+ color: #121010;
+ font-size: 16px;
+ line-height: 1.5;
+}
+
+.prix-card .offer-list li::before {
+ content: "✓";
+ position: absolute;
+ left: 0;
+ top: 10px;
+ color: #2E7D32;
+ font-weight: bold;
+ font-size: 20px;
+}
+
+.prix-card .offer-list li .valeur {
+ color: #8A7548;
+ font-style: italic;
+ font-size: 14px;
+}
+
+.valeur-totale {
+ color: #121010;
+ font-size: 18px;
+ margin-bottom: 8px;
+ font-weight: 600;
+}
+
+.prix-barre {
+ color: #8A7548;
+ font-size: 24px;
+ text-decoration: line-through;
+ margin-bottom: 4px;
+}
+
+.prix-actuel {
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ color: #A83232;
+ font-size: 70px;
+ font-weight: 900;
+ line-height: 1;
+ margin-bottom: 12px;
+}
+
+.prix-meta {
+ color: #8A7548;
+ font-size: 14px;
+ font-style: italic;
+ margin-bottom: 30px;
+}
+
+.prix-card .cta-button {
+ max-width: 100%;
+ width: auto;
+ padding: 22px 50px;
+ font-size: 21px;
+}
+
+/* ============================================
+ SECTION 12 — FAQ
+============================================ */
+.section-faq {
+ background: #F4EAD5;
+ padding: 80px 24px;
+}
+
+.faq-list {
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+.faq-item {
+ background: #FFFFFF;
+ border-radius: 18px;
+ margin-bottom: 14px;
+ overflow: hidden;
+ box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.faq-item summary {
+ padding: 22px 26px;
+ cursor: pointer;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ color: #121010;
+ font-weight: 700;
+ font-size: 16px;
+ list-style: none;
+ position: relative;
+ padding-right: 50px;
+ transition: background 0.2s ease;
+}
+
+.faq-item summary:hover {
+ background: rgba(201,169,97,0.08);
+}
+
+.faq-item summary::after {
+ content: "+";
+ position: absolute;
+ right: 26px;
+ top: 50%;
+ transform: translateY(-50%);
+ font-size: 28px;
+ color: #A83232;
+ font-weight: 300;
+ transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+ transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item .answer {
+ padding: 0 26px 22px 26px;
+ color: #121010;
+ font-size: 16px;
+ line-height: 1.7;
+}
+
+/* ============================================
+ PIED DE PAGE
+============================================ */
+.footer {
+ background: #121010;
+ color: #8A7548;
+ padding: 40px 24px;
+ text-align: center;
+ font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+ font-size: 13px;
+}
+
+.footer .links {
+ margin-bottom: 16px;
+}
+
+.footer .links a {
+ color: #C9A961;
+ text-decoration: none;
+ margin: 0 12px;
+ transition: color 0.2s;
+}
+
+.footer .links a:hover { color: #F4EAD5; }
+
+.footer .copyright {
+ color: #8A7548;
+ font-size: 12px;
+ letter-spacing: 0.5px;
+}
+
+/* ============================================
+ RESPONSIVE — MOBILE
+============================================ */
+@media (max-width: 768px) {
+ .hero { padding: 50px 20px; }
+ .hero-grid { 
+ grid-template-columns: 1fr; 
+ gap: 40px;
+ text-align: center;
+ }
+ .hero-image img { max-width: 260px; }
+ .hero-content h1 { font-size: 30px; }
+ .hero-subtitle { font-size: 19px; }
+ .hero-bullets li { justify-content: center; text-align: left; }
+ 
+ .section-reconnaissez,
+ .section-imaginez,
+ .section-voici,
+ .section-bonus,
+ .section-pourqui,
+ .section-auteur,
+ .section-garantie,
+ .section-prix,
+ .section-faq { padding: 60px 20px; }
+ 
+ .section-title { font-size: 26px; margin-bottom: 36px; }
+ 
+ .section-reconnaissez p,
+ .section-imaginez p { font-size: 17px; }
+ 
+ .punchline { font-size: 20px !important; }
+ 
+ .jours-grid { 
+ grid-template-columns: 1fr; 
+ gap: 12px;
+ }
+ 
+ .bonus-grid { 
+ grid-template-columns: 1fr;
+ gap: 30px;
+ text-align: center;
+ }
+ .bonus-image img { max-width: 240px; }
+ .bonus-bullets li { text-align: left; }
+ 
+ .pourqui-grid { 
+ grid-template-columns: 1fr;
+ gap: 20px;
+ }
+ 
+ .section-auteur blockquote { font-size: 18px; }
+ 
+ .garantie-card,
+ .prix-card { padding: 40px 24px; }
+ .prix-actuel { font-size: 56px; }
+ .prix-card .cta-button { padding: 18px 30px; font-size: 18px; }
+ 
+ .cta-button { font-size: 17px; padding: 18px 24px; }
+ 
+ .bandeau-urgence { font-size: 13px; padding: 12px; }
+}
+</style>
+
+<!-- ============================================
+ SECTION 1 — BANDEAU D'URGENCE
+============================================ -->
+<div class="bandeau-urgence">
+ ⏱ Offre de lancement · 27€ au lieu de 47€ · 100 premiers acheteurs
+</div>
+
+<!-- ============================================
+ SECTION 2 — HERO
+============================================ -->
+<section class="hero">
+ <div class="hero-grid">
+ <div class="hero-image">
+ <img src="REMPLACER_PAR_URL_COUVERTURE_PRINCIPALE" alt="10 Jours pour Reprendre le Contrôle">
+ </div>
+ <div class="hero-content">
+ <h1>
+ Devenez le manager que votre équipe respecte vraiment.
+ <span class="accent">En 10 jours.</span>
+ </h1>
+ <p class="hero-subtitle">Sans formation à 3 000 €.</p>
+ <p class="hero-pitch">
+ Le manuel de terrain qui transforme un chef débordé en leader respecté. Conçu par et pour les managers de proximité qui n'ont ni le temps ni l'envie d'écouter du blabla corporate.
+ </p>
+ <ul class="hero-bullets">
+ <li>10 missions concrètes, une par jour ouvré</li>
+ <li>Applicable dès demain matin à 8h</li>
+ <li>Workbook PDF imprimable inclus</li>
+ </ul>
+ <a href="#prix" class="cta-button">👉 Je prends le contrôle · 27€</a>
+ <span class="cta-microline">🔒 Paiement sécurisé · 📥 Téléchargement immédiat · ✅ Garantie 14 jours</span>
+ </div>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 3 — RECONNAISSEZ-VOUS CE MANAGER ?
+============================================ -->
+<section class="section-reconnaissez">
+ <div class="container">
+ <h2 class="section-title">Reconnaissez-vous ce manager ?</h2>
+ <p>Vous avez été promu il y a quelques mois. On vous a tapé dans le dos, on vous a dit "bravo", et on vous a souhaité bonne chance.</p>
+ <p>Depuis, vous courez.</p>
+ <p>Vous arrivez à 7h45. Vous repartez à 19h30. Vous prenez du travail le week-end. Et pourtant, vous avez l'impression de ne jamais avancer.</p>
+ <p><strong>Votre équipe ne fait pas ce que vous demandez.</strong> Les gens prennent leurs pauses 15 minutes plus tôt. Les délais glissent. Deux personnes ne se parlent plus depuis 4 mois et tout le monde fait semblant de ne pas voir.</p>
+ <p><strong>Vous tolérez. Parce que recadrer, c'est inconfortable.</strong> Parce que vous ne savez pas par où commencer. Parce que vous avez peur de mal le dire.</p>
+ <p>Et le soir, en rentrant, vous vous demandez si vous êtes vraiment fait pour ça.</p>
+ <p><strong>La vérité, c'est que personne ne vous a formé.</strong> On vous a promu parce que vous étiez bon dans votre métier. Pas parce que vous saviez manager. Et la différence, vous la payez tous les jours.</p>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 4 — IMAGINEZ DANS 14 JOURS
+============================================ -->
+<section class="section-imaginez">
+ <div class="container">
+ <h2 class="section-title alt-color">Imaginez dans 14 jours.</h2>
+ <p>Vous arrivez le matin avec un plan clair. Trois priorités. Pas dix.</p>
+ <p>Votre équipe sait exactement où elle va. Vous n'avez plus à répéter.</p>
+ <p>Vous avez recadré la personne qui plombait l'ambiance depuis 6 mois. Calmement. Proprement. Et tout le monde a vu que le cadre était revenu.</p>
+ <p>Vous déléguez. Vraiment. Pas en refilant. En confiant.</p>
+ <p>Vous récupérez 8 heures par semaine. Vous rentrez à 18h. Sans culpabiliser.</p>
+ <p>Et le soir, dans votre carnet, vous écrivez :</p>
+ <p class="punchline">"Aujourd'hui, j'ai été le chef que mon équipe mérite."</p>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 5 — VOICI LE PRODUIT
+============================================ -->
+<section class="section-voici">
+ <div class="container-narrow">
+ <div class="pack-image">
+ <img src="REMPLACER_PAR_URL_VISUEL_PACK" alt="Le manuel et ses outils">
+ </div>
+ <h2>Voici "10 Jours pour Reprendre le Contrôle"</h2>
+ <p>Ce n'est pas un livre théorique. Ce n'est pas un séminaire à 3 000 €. Ce n'est pas un MOOC de 40 heures que vous ne finirez jamais.</p>
+ <p><strong>C'est un carnet de route.</strong></p>
+ <p>10 jours ouvrés. 10 missions. 10 résultats concrets.</p>
+ <p>Chaque journée tient en 3 temps :</p>
+ <ol class="steps-list">
+ <li>15-20 minutes de lecture le matin (le pourquoi)</li>
+ <li>Un cas concret décortiqué (le comment)</li>
+ <li>3 à 5 actions précises à mener dans la journée</li>
+ </ol>
+ <p>Vous l'ouvrez le lundi matin avec un café tiède. Vous le refermez le vendredi suivant avec une équipe qui sait où elle va — et un manager bien dans ses pompes.</p>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 6 — LES 10 JOURS (GRILLE)
+============================================ -->
+<section class="section-jours">
+ <div class="container">
+ <h2 class="section-title">10 jours. 10 missions. Un nouveau chef.</h2>
+ <div class="jours-grid">
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 1 · L'état des lieux</div>
+ <div class="desc-jour">Voir la réalité telle qu'elle est, pas telle qu'on aimerait qu'elle soit.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 2 · Recadrage et autorité</div>
+ <div class="desc-jour">Remettre du cadre, sans casser personne. La méthode FAIR pas à pas.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 3 · Leadership et exemplarité</div>
+ <div class="desc-jour">Incarner ce que vous attendez. Les 7 micro-actes du leader.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 4 · Objectifs et priorités</div>
+ <div class="desc-jour">Donner à votre équipe un cap clair, mesurable, partagé.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 5 · Déléguer et responsabiliser</div>
+ <div class="desc-jour">Arrêter de tout faire vous-même. La règle des 5 C.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 6 · Communication et écoute</div>
+ <div class="desc-jour">Parler moins, écouter mieux, dire l'essentiel.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 7 · Gérer les conflits</div>
+ <div class="desc-jour">Désamorcer ce qui pourrit l'équipe en silence. Protocole en 4 temps.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 8 · Réunions et gestion du temps</div>
+ <div class="desc-jour">Récupérer 10 heures par semaine sans rien sacrifier d'utile.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 9 · Faire grandir ses gens</div>
+ <div class="desc-jour">Passer du chef qui exige au chef qui fait grandir.</div>
+ </div>
+ <div class="jour-card">
+ <div class="titre-jour">JOUR 10 · Installer durablement</div>
+ <div class="desc-jour">Transformer les acquis en habitudes qui durent.</div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 7 — BONUS WORKBOOK
+============================================ -->
+<section class="section-bonus">
+ <div class="container">
+ <h2>🎁 Bonus inclus · offert pour le lancement</h2>
+ <div class="bonus-grid">
+ <div class="bonus-image">
+ <img src="REMPLACER_PAR_URL_COUVERTURE_WORKBOOK" alt="Le Workbook du Manager">
+ </div>
+ <div class="bonus-content">
+ <h3>LE WORKBOOK DU MANAGER</h3>
+ <p class="sub">Le compagnon indispensable du manuel.</p>
+ <p>Toutes les fiches, exercices et checklists prêts à imprimer pour appliquer la méthode sur votre terrain.</p>
+ <ul class="bonus-bullets">
+ <li>Une fiche par membre de votre équipe</li>
+ <li>La grille des 3 colonnes à afficher</li>
+ <li>La cartographie de votre temps</li>
+ <li>La checklist des 10 jours</li>
+ <li>Tous les outils du livre, prêts à remplir</li>
+ </ul>
+ <p class="closing">Sans cette fiche, vous ne managez pas. Vous improvisez.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 8 — POUR QUI C'EST FAIT
+============================================ -->
+<section class="section-pourqui">
+ <div class="container">
+ <h2 class="section-title">C'est pour vous si...</h2>
+ <div class="pourqui-grid">
+ <div class="pourqui-card positive">
+ <h3>✅ POUR VOUS</h3>
+ <ul>
+ <li>Vous venez d'être promu manager et personne ne vous a formé</li>
+ <li>Vous encadrez 5 à 50 personnes et vous courez tous les jours</li>
+ <li>Vous tolérez des comportements depuis trop longtemps</li>
+ <li>Vous voulez des outils concrets, applicables dès demain matin</li>
+ <li>Vous en avez assez du blabla corporate et des concepts à la mode</li>
+ <li>Vous voulez retrouver du temps ET du sens dans votre rôle</li>
+ </ul>
+ </div>
+ <div class="pourqui-card negative">
+ <h3>❌ PAS POUR VOUS</h3>
+ <ul>
+ <li>Vous cherchez des théories académiques sur le management</li>
+ <li>Vous voulez juste être tapé dans le dos</li>
+ <li>Vous n'êtes pas prêt à mettre en place les actions proposées</li>
+ <li>Vous attendez une solution magique sans effort</li>
+ <li>Vous cherchez à devenir "ami" avec votre équipe</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 9 — POURQUOI CE MANUEL
+============================================ -->
+<section class="section-auteur">
+ <div class="container-narrow">
+ <h2 class="section-title alt-color">Pourquoi ce manuel ?</h2>
+ <blockquote>"J'ai commandé des soldats sous le feu avant de manager des équipes en entreprise. Les principes ne changent pas. Ce qui change, c'est l'enjeu immédiat."</blockquote>
+ <blockquote>"En section de combat, une mauvaise décision se compte en vies. En entreprise, elle se compte en démissions, en arrêts maladie, en désillusion."</blockquote>
+ <blockquote>"J'ai écrit ce manuel comme j'aurais aimé qu'on me l'écrive il y a quelques années. Sans bla-bla. Sans concepts à la mode. Avec des outils que vous pouvez tester demain matin à 8h."</blockquote>
+ <p class="signature">— L'auteur</p>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 10 — GARANTIE
+============================================ -->
+<section class="section-garantie">
+ <div class="container">
+ <div class="garantie-card">
+ <div class="garantie-icon">🛡️</div>
+ <h2>Garantie 14 jours · satisfait ou remboursé</h2>
+ <p>Testez le manuel pendant 14 jours.</p>
+ <p>Si vous ne sentez pas de différence dans votre management dès la fin de la première semaine, <strong>vous m'envoyez un simple mail. Je vous rembourse intégralement, sans poser de question.</strong></p>
+ <p>Vous gardez le manuel. Vous gardez le workbook.</p>
+ <p>Aucun risque pour vous. Tout le risque est pour moi.</p>
+ <p class="closing">C'est ma façon de vous dire que je crois à 100 % à ce que je vous propose.</p>
+ </div>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 11 — PRIX ET ACHAT FINAL
+============================================ -->
+<section class="section-prix" id="prix">
+ <div class="container">
+ <div class="prix-card">
+ <h2>Récupérez le contrôle dès aujourd'hui</h2>
+ <ul class="offer-list">
+ <li>Le manuel "10 Jours pour Reprendre le Contrôle" (PDF + ePub) <span class="valeur">— Valeur 47€</span></li>
+ <li>Le Workbook du Manager (PDF imprimable) <span class="valeur">— Valeur 17€</span></li>
+ </ul>
+ <p class="valeur-totale">Valeur totale : 64€</p>
+ <p class="prix-barre">47€</p>
+ <p class="prix-actuel">27€</p>
+ <p class="prix-meta">Offre de lancement · 100 premiers acheteurs</p>
+ <a href="REMPLACER_PAR_URL_BON_DE_COMMANDE_SYSTEMIO" class="cta-button">👉 Je commande maintenant · 27€</a>
+ <p class="cta-microline">🔒 Paiement 100% sécurisé via Stripe · 📥 Téléchargement immédiat · 🛡️ Garantie 14 jours · 💳 CB, Apple Pay, Google Pay</p>
+ </div>
+ </div>
+</section>
+
+<!-- ============================================
+ SECTION 12 — FAQ
+============================================ -->
+<section class="section-faq">
+ <div class="container">
+ <h2 class="section-title">Vos questions, mes réponses</h2>
+ <div class="faq-list">
+ <details class="faq-item">
+ <summary>Combien de temps pour appliquer ?</summary>
+ <div class="answer">Le manuel est conçu pour 10 jours ouvrés (2 semaines). Chaque jour demande 15 à 20 minutes de lecture + 30 à 60 minutes d'application sur le terrain. Total : moins de 1h30 par jour, intégrable dans n'importe quel agenda chargé.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Je n'ai pas le temps de tout faire en 2 semaines, c'est grave ?</summary>
+ <div class="answer">Non. Le manuel est aussi un outil de référence : vous pouvez piocher le chapitre qui correspond à votre problème du moment. Le format 10 jours est une trame idéale, pas une obligation.</div>
+ </details>
+ <details class="faq-item">
+ <summary>C'est pour quel type d'entreprise ?</summary>
+ <div class="answer">Tous secteurs : industrie, logistique, BTP, services, banque, santé, IT, retail. Les principes du management de proximité sont universels. Les cas concrets du livre couvrent volontairement des secteurs très différents.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Je suis manager depuis longtemps, est-ce que je vais apprendre quelque chose ?</summary>
+ <div class="answer">Oui. Les managers expérimentés découvrent surtout des outils qu'ils utilisaient mal ou des angles morts qu'ils n'avaient pas vus. Beaucoup de techniques (méthode FAIR, règle des 5C, protocole conflit en 4 temps) ne sont pas connues.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Format papier ou numérique ?</summary>
+ <div class="answer">100% numérique. PDF haute qualité (lisible sur tous supports) + ePub (compatible Kindle et autres liseuses). Vous pouvez imprimer chez vous si vous préférez le papier.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Comment je reçois mon manuel ?</summary>
+ <div class="answer">Téléchargement immédiat après paiement, sur la page de remerciement et par email. Aucune attente.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Et si je ne suis pas satisfait ?</summary>
+ <div class="answer">Vous m'envoyez un mail dans les 14 jours. Je vous rembourse intégralement, sans question. Vous gardez le manuel et les bonus.</div>
+ </details>
+ <details class="faq-item">
+ <summary>Je peux payer en plusieurs fois ?</summary>
+ <div class="answer">Pour un produit à 27€, le paiement se fait en une fois. C'est l'équivalent d'un repas en ville pour transformer durablement votre management.</div>
+ </details>
+ </div>
+ </div>
+</section>
+
+<!-- ============================================
+ PIED DE PAGE
+============================================ -->
+<footer class="footer">
+ <div class="links">
+ <a href="REMPLACER_URL_MENTIONS_LEGALES">Mentions légales</a>
+ <a href="REMPLACER_URL_CGV">CGV</a>
+ <a href="REMPLACER_URL_CONFIDENTIALITE">Politique de confidentialité</a>
+ <a href="REMPLACER_URL_CONTACT">Contact</a>
+ </div>
+ <div class="copyright">
+ © 2026 Method & Co — Tous droits réservés
+ </div>
+</footer>
