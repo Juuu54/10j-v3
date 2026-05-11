@@ -894,8 +894,12 @@ img { max-width: 100%; height: auto; display: block; }
  <li>Applicable dès demain matin à 8h</li>
  <li>Workbook PDF imprimable inclus</li>
  </ul>
- <a href="#prix" class="cta-button">👉 Je prends le contrôle · 27€</a>
- <span class="cta-microline">🔒 Paiement sécurisé · 📥 Téléchargement immédiat</span>
+ <a href="#prix" class="cta-button">👉 Je prends le contrôle · 27€<span style="text-decoration: line-through; opacity: 0.6; font-size: 16px; margin-left: 10px;">64€</span></a>
+ <p class="cta-microline">
+🔒 Paiement 100% sécurisé via Stripe<br>
+📥 Téléchargement immédiat<br>
+💳 CB, Apple Pay, Google Pay
+</p>
  </div>
  </div>
 </section>
