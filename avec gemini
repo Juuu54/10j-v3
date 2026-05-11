@@ -895,7 +895,7 @@ img { max-width: 100%; height: auto; display: block; }
  <li>Workbook PDF imprimable inclus</li>
  </ul>
  <a href="#prix" class="cta-button">👉 Je prends le contrôle · 27€</a>
- <span class="cta-microline">🔒 Paiement sécurisé · 📥 Téléchargement immédiat · ✅ Garantie 14 jours</span>
+ <span class="cta-microline">🔒 Paiement sécurisé · 📥 Téléchargement immédiat</span>
  </div>
  </div>
 </section>
@@ -1070,20 +1070,6 @@ img { max-width: 100%; height: auto; display: block; }
 <!-- ============================================
  SECTION 10 — GARANTIE
 ============================================ -->
-<section class="section-garantie">
- <div class="container">
- <div class="garantie-card">
- <div class="garantie-icon">🛡️</div>
- <h2>Garantie 14 jours · satisfait ou remboursé</h2>
- <p>Testez le manuel pendant 14 jours.</p>
- <p>Si vous ne sentez pas de différence dans votre management dès la fin de la première semaine, <strong>vous m'envoyez un simple mail. Je vous rembourse intégralement, sans poser de question.</strong></p>
- <p>Vous gardez le manuel. Vous gardez le workbook.</p>
- <p>Aucun risque pour vous. Tout le risque est pour moi.</p>
- <p class="closing">C'est ma façon de vous dire que je crois à 100 % à ce que je vous propose.</p>
- </div>
- </div>
-</section>
-
 <!-- ============================================
  SECTION 11 — PRIX ET ACHAT FINAL
 ============================================ -->
@@ -1100,7 +1086,7 @@ img { max-width: 100%; height: auto; display: block; }
  <p class="prix-actuel">27€</p>
  <p class="prix-meta">Offre de lancement · 100 premiers acheteurs</p>
  <a href="REMPLACER_PAR_URL_BON_DE_COMMANDE_SYSTEMIO" class="cta-button">👉 Je commande maintenant · 27€</a>
- <p class="cta-microline">🔒 Paiement 100% sécurisé via Stripe · 📥 Téléchargement immédiat · 🛡️ Garantie 14 jours · 💳 CB, Apple Pay, Google Pay</p>
+ <p class="cta-microline">🔒 Paiement 100% sécurisé via Stripe · 📥 Téléchargement immédiat · 💳 CB, Apple Pay, Google Pay</p>
  </div>
  </div>
 </section>
@@ -1135,10 +1121,6 @@ img { max-width: 100%; height: auto; display: block; }
  <details class="faq-item">
  <summary>Comment je reçois mon manuel ?</summary>
  <div class="answer">Téléchargement immédiat après paiement, sur la page de remerciement et par email. Aucune attente.</div>
- </details>
- <details class="faq-item">
- <summary>Et si je ne suis pas satisfait ?</summary>
- <div class="answer">Vous m'envoyez un mail dans les 14 jours. Je vous rembourse intégralement, sans question. Vous gardez le manuel et les bonus.</div>
  </details>
  <details class="faq-item">
  <summary>Je peux payer en plusieurs fois ?</summary>
