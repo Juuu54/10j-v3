@@ -461,11 +461,9 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .pourqui-grid {
- max-width: 1000px;
+ max-width: 700px;
  margin: 0 auto;
- display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 30px;
+ display: block;
 }
 
 .pourqui-card {
@@ -479,9 +477,7 @@ img { max-width: 100%; height: auto; display: block; }
  border-left: 5px solid #2E7D32;
 }
 
-.pourqui-card.negative {
- border-left: 5px solid #A83232;
-}
+
 
 .pourqui-card h3 {
  font-family: 'Nunito', 'Helvetica Neue', Arial, sans-serif;
@@ -492,7 +488,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .pourqui-card.positive h3 { color: #2E7D32; }
-.pourqui-card.negative h3 { color: #A83232; }
+
 
 .pourqui-card ul {
  list-style: none;
@@ -1054,18 +1050,7 @@ img { max-width: 100%; height: auto; display: block; }
  <li>Vous voulez retrouver du temps ET du sens dans votre rôle</li>
  </ul>
  </div>
- <div class="pourqui-card negative">
- <h3>❌ PAS POUR VOUS</h3>
- <ul>
- <li>Vous cherchez des théories académiques sur le management</li>
- <li>Vous voulez juste être tapé dans le dos</li>
- <li>Vous n'êtes pas prêt à mettre en place les actions proposées</li>
- <li>Vous attendez une solution magique sans effort</li>
- <li>Vous cherchez à devenir "ami" avec votre équipe</li>
- </ul>
- </div>
- </div>
- </div>
+ 
 </section>
 
 <!-- ============================================
