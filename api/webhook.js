@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   try {
     const body = req.body;
 const email = body?.customer?.email || body?.contact?.email || body?.email;
-const firstName = body?.customer?.fields?.firstname || body?.contact?.first_name || body?.first_name || '';
+const firstName = body?.customer?.fields?.first_name || body?.contact?.first_name || body?.first_name || '';
 
     if (!email) {
       return res.status(400).json({ error: 'No email found in payload' });
